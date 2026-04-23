@@ -1,0 +1,225 @@
+.subject-view-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background-color: transparent;
+}
+
+.subject-banner {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  min-height: 300px;
+  background-color: var(--grafite);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px;
+  overflow: hidden;
+}
+
+.subject-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.8) 0%, rgba(45, 45, 45, 0.9) 100%);
+  z-index: 1;
+}
+
+.back-btn {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 16px;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background var(--transition-fast);
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.subject-banner-content {
+  position: relative;
+  z-index: 10;
+  color: white;
+  margin-left: 20px;
+}
+
+.subject-category {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.subject-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+/* Content Area */
+.subject-content {
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+.card-white {
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 60px;
+  border: 1px solid var(--glass-border);
+}
+
+.subject-desc-text {
+  font-size: 1.15rem;
+  color: var(--grafite-light);
+  line-height: 1.7;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.sub-section-title {
+  font-size: 1.75rem;
+  color: var(--grafite);
+  margin-bottom: 24px;
+}
+
+/* Subject Gallery */
+.subject-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.gallery-card {
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--glass-border);
+  transition: all var(--transition-normal);
+}
+
+.gallery-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.gallery-img {
+  aspect-ratio: 16 / 9;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.gallery-info {
+  padding: 20px;
+}
+
+.gallery-info h4 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: var(--grafite);
+}
+
+.gallery-info p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.activity-skills, .activity-critique {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--glass-border);
+  margin-top: 12px;
+  line-height: 1.4;
+}
+
+.activity-skills strong, .activity-critique strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.activity-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 8px 16px;
+  background: var(--primary-accent);
+  color: white;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background var(--transition-fast);
+}
+
+.activity-link-btn:hover {
+  background: var(--primary-accent-hover);
+}
+
+.activity-link-btn.secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid var(--glass-border);
+}
+
+.activity-link-btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 900px) {
+  .subject-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .subject-banner {
+    padding: 24px;
+    align-items: center;
+    text-align: center;
+  }
+  .subject-banner-content {
+    margin-left: 0;
+  }
+  .back-btn {
+    top: 20px;
+    left: 20px;
+  }
+  .card-white {
+    padding: 24px;
+  }
+}
