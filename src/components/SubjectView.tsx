@@ -109,7 +109,7 @@ export const SubjectView: React.FC<SubjectViewProps> = ({ viewState, onBack }) =
       
       {/* Minimal Footer */}
       <footer className="minimal-footer">
-        <p>© 2026 Joao Pedro Cagliari.</p>
+        <p>© 2026 João Pedro Cagliari.</p>
       </footer>
 
     </div>
