@@ -1,3 +1,5 @@
+import React from 'react';
+import './Home.css';
 import { ExternalLink, Mail, ArrowRight } from 'lucide-react';
 
 interface HomeProps {
