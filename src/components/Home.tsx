@@ -15,7 +15,7 @@ export const Home: React.FC = () => {
         
         {/* Floating details over the banner */}
         <div className="hero-content">
-          <h1 className="hero-title">João Ornellas</h1>
+          <h1 className="hero-title">Joao Pedro Cagliari</h1>
           <p className="hero-subtitle">Estudante de analise em desenvolvimento de sistemas</p>
         </div>
       </section>
@@ -29,7 +29,7 @@ export const Home: React.FC = () => {
           <div className="about-text-wrapper">
             <h2 className="section-title">Sobre Mim</h2>
             <p>
-              Olá, meu nome é João Pedro conhecido como jota, tenho 18 anos. Nasci no interior de São Paulo, no dia 18/02/2008, filho de Camila e Tiago. Tenho uma grande paixão por jogar futebol e futevôlei com os amigos. Além disso, meu hobby favorito é a altinha e o futevôlei, esportes que pratico há mais de 3 anos. Uma curiosidade sobre mim é que já tive a oportunidade de jogar no Corinthians.
+              Olá, meu nome é Joao Pedro Cagliari, conhecido como jota, tenho 18 anos. Nasci no interior de São Paulo, no dia 18/02/2008, filho de Camila e Tiago. Tenho uma grande paixão por jogar futebol e futevôlei com os amigos. Além disso, meu hobby favorito é a altinha e o futevôlei, esportes que pratico há mais de 3 anos. Uma curiosidade sobre mim é que já tive a oportunidade de jogar no Corinthians.
             </p>
           </div>
         </div>
@@ -118,7 +118,7 @@ export const Home: React.FC = () => {
       
       {/* Minimal Footer */}
       <footer className="minimal-footer">
-        <p>© 2026 João Ornellas. Criado com React.</p>
+        <p>© 2026 Joao Pedro Cagliari. Criado com React.</p>
       </footer>
 
     </div>
