@@ -1,8 +1,10 @@
-import React from 'react';
-import './Home.css';
-import { Download, ExternalLink, ArrowRight, Mail, Copy, Check } from 'lucide-react';
+import { ExternalLink, Mail, ArrowRight } from 'lucide-react';
 
-export const Home: React.FC = () => {
+interface HomeProps {
+  onViewSubjects: () => void;
+}
+
+export const Home: React.FC<HomeProps> = ({ onViewSubjects }) => {
   return (
     <div className="home-container animate-fade-in">
       
@@ -17,6 +19,13 @@ export const Home: React.FC = () => {
         <div className="hero-content">
           <h1 className="hero-title">Joao Pedro Cagliari</h1>
           <p className="hero-subtitle">Estudante de analise em desenvolvimento de sistemas</p>
+          
+          <div className="hero-actions">
+            <button className="primary-btn hero-btn" onClick={onViewSubjects}>
+              <ArrowRight size={20} />
+              Ver Matérias
+            </button>
+          </div>
         </div>
       </section>
 
@@ -33,8 +42,6 @@ export const Home: React.FC = () => {
             </p>
           </div>
         </div>
-
-
       </section>
 
       {/* SECTION: Curriculum & Old Portfolio */}
@@ -51,7 +58,6 @@ export const Home: React.FC = () => {
             target="_blank" 
             rel="noopener noreferrer" 
             className="primary-btn" 
-            style={{ textDecoration: 'none' }}
           >
             <ExternalLink size={20} />
             Acessar Currículo
@@ -59,8 +65,8 @@ export const Home: React.FC = () => {
         </div>
 
         {/* Portfolios Anteriores (Unified) */}
-        <div className="old-portfolio-box" style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '24px' }}>
-          <div style={{ width: '100%' }}>
+        <div className="old-portfolio-box">
+          <div className="cv-info">
             <h2 className="section-title dark">Portfólios Anteriores</h2>
             <p className="portfolio-desc">
               Acompanhe minha evolução ao longo do tempo visualizando os trabalhos que desenvolvi em anos anteriores.
@@ -72,7 +78,6 @@ export const Home: React.FC = () => {
               target="_blank" 
               rel="noopener noreferrer" 
               className="secondary-btn"
-              style={{ textDecoration: 'none' }}
             >
               <ExternalLink size={20} />
               Portfólio de 2024
@@ -82,7 +87,6 @@ export const Home: React.FC = () => {
               target="_blank" 
               rel="noopener noreferrer" 
               className="secondary-btn"
-              style={{ textDecoration: 'none' }}
             >
               <ExternalLink size={20} />
               Portfólio de 2025

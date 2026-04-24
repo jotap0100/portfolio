@@ -9,21 +9,17 @@
 .subject-banner {
   position: relative;
   width: 100%;
-  height: 40vh;
-  min-height: 300px;
-  background-color: var(--grafite);
+  padding: 120px 40px 60px 40px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding: 40px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   overflow: hidden;
 }
 
 .subject-gradient-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.8) 0%, rgba(45, 45, 45, 0.9) 100%);
-  z-index: 1;
+  display: none;
 }
 
 .back-btn {
@@ -34,26 +30,28 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  color: white;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 10px 16px;
-  border-radius: 8px;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  color: var(--text-secondary);
+  background: transparent;
+  padding: 8px 0;
+  border-radius: 0;
+  backdrop-filter: none;
   font-weight: 500;
-  font-size: 0.95rem;
-  transition: background var(--transition-fast);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color var(--transition-fast);
+  border: none;
 }
 
 .back-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
+  color: var(--text-primary);
+  background: transparent;
 }
 
 .subject-banner-content {
   position: relative;
   z-index: 10;
   color: white;
-  margin-left: 20px;
 }
 
 .subject-category {
@@ -66,10 +64,12 @@
 }
 
 .subject-title {
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1.1;
+  font-family: var(--font-serif, serif);
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 1;
   letter-spacing: -0.02em;
+  text-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 /* Content Area */
@@ -125,8 +125,10 @@
 }
 
 .gallery-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-8px);
+  border-color: var(--primary-accent);
+  box-shadow: 0 15px 30px rgba(99, 102, 241, 0.2);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .gallery-img {

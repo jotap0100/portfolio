@@ -1,0 +1,52 @@
+.custom-cursor-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  z-index: 9999;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.custom-cursor-wrapper.hidden {
+  opacity: 0;
+}
+
+.cursor-dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: var(--primary-accent);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-ring {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid var(--primary-accent);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              height 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.3s ease;
+  opacity: 0.5;
+}
+
+.cursor-ring.pointer {
+  width: 60px;
+  height: 600px; /* Error: 60px obviously, but wait, a large height might be an accident. fixing to 60px */
+  width: 60px;
+  height: 60px;
+  background-color: rgba(99, 102, 241, 0.1);
+  border-color: var(--primary-accent);
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .custom-cursor-wrapper {
+    display: none;
+  }
+}

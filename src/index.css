@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* Premium Glassmorphic Dark Palette */
-  --bg-color: #0c0c0e;
+  /* Premium Purple Palette */
+  --bg-color: #0d0b14; /* Very deep purple-black */
   --surface-color: rgba(255, 255, 255, 0.03);
-  --glass-bg: rgba(255, 255, 255, 0.06);
+  --glass-bg: rgba(255, 255, 255, 0.05);
   --glass-border: rgba(255, 255, 255, 0.1);
   --text-primary: #ffffff;
   --text-secondary: rgba(255, 255, 255, 0.6);
@@ -13,8 +13,9 @@
   --grafite: #ffffff;
   --grafite-light: rgba(255, 255, 255, 0.7);
   
-  --primary-accent: #6366f1;
-  --primary-accent-hover: #4f46e5;
+  --primary-accent: #8b5cf6; /* Vibrant Purple */
+  --primary-accent-hover: #7c3aed;
+  --primary-accent-glow: rgba(139, 92, 246, 0.4);
 
   --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -31,11 +32,7 @@
 }
 
 body {
-  background-image: url('./assets/background.png');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+  background-color: var(--bg-color);
   color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

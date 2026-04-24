@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './App.css';
-import { Menu } from 'lucide-react';
+import { Menu, ArrowLeft } from 'lucide-react';
 import { Sidebar } from './components/Sidebar';
 import { Home } from './components/Home';
 import { SubjectView } from './components/SubjectView';
 import { SenaiLogo } from './components/SenaiLogo';
+import { AnimatedBackground } from './components/AnimatedBackground';
 
 // State definition
 export type ViewState = 
@@ -21,12 +22,22 @@ function App() {
 
   return (
     <div className="app-container">
+      <AnimatedBackground />
       {/* Header */}
       <header className="top-header">
-        <button className="menu-trigger" onClick={toggleSidebar}>
-          <Menu size={24} />
-          <span>Matérias</span>
-        </button>
+        <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+          <button className="menu-trigger" onClick={toggleSidebar}>
+            <Menu size={24} />
+            <span>Matérias</span>
+          </button>
+          
+          {view.type !== 'home' && (
+            <button className="menu-trigger back-header-btn" onClick={navigateToHome}>
+              <ArrowLeft size={20} />
+              <span>Voltar</span>
+            </button>
+          )}
+        </div>
         
         {/* School Logo */}
         <div className="logo-wrapper" onClick={navigateToHome} style={{cursor: 'pointer'}}>
@@ -48,7 +59,7 @@ function App() {
       {/* Main Content Area */}
       <main className="main-content">
         {view.type === 'home' ? (
-           <Home />
+           <Home onViewSubjects={toggleSidebar} />
         ) : (
            <SubjectView viewState={view} onBack={navigateToHome} />
         )}

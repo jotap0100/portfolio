@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { X, ChevronDown, ChevronRight, BookOpen, Lock } from 'lucide-react';
 import './Sidebar.css';
-import { subjectsData, type Category, type Subject } from '../data';
+import { subjectsData } from '../data';
 import type { ViewState } from '../App';
 
 interface SidebarProps {
